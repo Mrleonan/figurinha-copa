@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body * {
+  font-family: "roboto", sans-serif;
+}
+
+body {
+  background: linear-gradient(150deg, #0F2B05, #000000);
+  height: 100vh;
+  text-align: center;
+}
+
+header {
+  padding: 75px 0;
+}
+
+.card {
+  background: url(./assets/bg-explorer.svg);
+  width: 354px;
+  height: 508px;
+
+  display: inline-block;
+  cursor: grab;
+  transform: translateY(-100px);
+
+  opacity: 0;
+  animation: appear .4s forwards;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.card > img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid #F7DD43;
+  margin-top: 101px;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.info {
+  margin-top: 112px;
+  color: white;
+  margin-left: 64px;
+  text-align: left;
+  user-select: none;
+}
+.info h1 {
+  font-size: 18px;
+  line-height: 140%;
+}
+.info p {
+font-size: 14px;
+line-height: 160%;
+}
+
+@keyframes appear {
+  to{
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
